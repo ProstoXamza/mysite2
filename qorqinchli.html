@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xavf! Telefoningiz virus yuqtirdi!</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            text-align: center;
+            font-size: 24px;
+            transition: background 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+<h1>⚠ XAVF! TELEFONINGIZGA VIRUS YUQTIRILDI! ⚠</h1>
+<p>5 soniya ichida barcha fayllaringiz o'chiriladi...</p>
+
+<audio id="scarySound" src="https://www.fesliyanstudios.com/play-mp3/4389" preload="auto"></audio>
+
+<script>
+    function startScaryEffect() {
+        let sound = document.getElementById("scarySound");
+        sound.play();
+        
+        setInterval(() => {
+            document.body.style.backgroundColor = 
+                document.body.style.backgroundColor === "black" ? "red" : "black";
+        }, 500);
+
+        setTimeout(() => {
+            document.body.innerHTML = "<h1>💀 Siz kech qoldingiz... 💀</h1>";
+        }, 5000);
+    }
+
+    setTimeout(startScaryEffect, 2000);
+</script>
+
+</body>
+</html>
